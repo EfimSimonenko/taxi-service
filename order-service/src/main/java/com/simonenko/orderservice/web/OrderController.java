@@ -29,6 +29,9 @@ public class OrderController {
         return orderService.createOrder(order);
     }
 
+    /*
+    for testing
+     */
     @GetMapping
     public List<Order> getOrders(@RequestParam(name = "driver") String username,
                                  @RequestParam Status status) {

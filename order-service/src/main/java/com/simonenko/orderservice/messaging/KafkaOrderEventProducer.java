@@ -26,12 +26,12 @@ public class KafkaOrderEventProducer {
                 new ListenableFutureCallback<SendResult<String, Order>>() {
                     @Override
                     public void onFailure(Throwable ex) {
-                        LOGGER.error("Failure while sending message in kafka.", ex);
+                        LOGGER.error("Failure while sending message to kafka topic", ex);
                     }
 
                     @Override
                     public void onSuccess(SendResult<String, Order> result) {
-                        LOGGER.info("Successfully sent message to kafka");
+                        LOGGER.info("Successfully sent message to kafka topic");
                     }
 
                 });
